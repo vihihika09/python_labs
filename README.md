@@ -9,7 +9,7 @@
 ![print(f'База после скидки: {base:.2f} ₽') print(f'НДС:               {vat_amount:.2f} ₽') print(f'Итого к оплате:    {total:.2f} ₽')](./images/lab01/ex-03.png)
 
 ## Задание 4
-![ans=f'{minute//60}:{(minute%60)}'](.\images\lab01\ex-4.png)
+![ans=f'{minute//60}:{(minute%60)}'](./images/lab01/ex-4.png)
 
 ## Задание 5
-![print(f'Инициалы: {init}.') print(f'Длина (символов):{cnt+2}')](.\images\lab01\ex-05.png)
+![print(f'Инициалы: {init}.') print(f'Длина (символов):{cnt+2}')](./images/lab01/ex-05.png)
