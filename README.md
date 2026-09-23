@@ -1,6 +1,7 @@
 # Лаболаторная работа 1
 ## Задание 1
-![Hello wolrd!](./images/lab01/ex01.png)
+# Hello world
+![](./images/lab01/ex01.png)
 
 ## Задание 2
 ![print(f'sum={a+b}; avg={((a+b)/2):.2f}')](./images/lab01/ex-02.png)
