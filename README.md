@@ -6,13 +6,27 @@
 ![](./images/lab01/ex01.png)
 
 ## Задание 2
-![print(f'sum={a+b}; avg={((a+b)/2):.2f}')](./images/lab01/ex-02.png)
+### a=float(input('a:').replace(',','.'))
+### b=float(input('b:').replace(',','.'))
+### print(f'sum={a+b}; avg={((a+b)/2):.2f}')
+![](./images/lab01/ex-02.png)
 
 ## Задание 3
-![print(f'База после скидки: {base:.2f} ₽') print(f'НДС:               {vat_amount:.2f} ₽') print(f'Итого к оплате:    {total:.2f} ₽')](./images/lab01/ex-03.png)
+### print(f'База после скидки: {base:.2f} ₽')
+### print(f'НДС:         {vat_amount:.2f} ₽')
+### print(f'Итого к оплате:    {total:.2f} ₽')
+![)](./images/lab01/ex-03.png)
 
 ## Задание 4
-![ans=f'{minute//60}:{(minute%60)}'](./images/lab01/ex-4.png)
+### minute=int(input('Минуты:'))
+### ans=f'{minute//60}:{(minute%60)}'
+### if (ans[-1]=='0' and ans[-2]==':'):
+###    print(ans+'0')
+### else:
+###    print(ans)
+![](./images/lab01/ex-4.png)
 
 ## Задание 5
-![print(f'Инициалы: {init}.') print(f'Длина (символов):{cnt+2}')](./images/lab01/ex-05.png)
+### print(f'Инициалы: {init}.') 
+### print(f'Длина (символов):{cnt+2}')
+![](./images/lab01/ex-05.png)
