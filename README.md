@@ -15,7 +15,7 @@
 ### print(f'База после скидки: {base:.2f} ₽')
 ### print(f'НДС:         {vat_amount:.2f} ₽')
 ### print(f'Итого к оплате:    {total:.2f} ₽')
-![)](./images/lab01/ex-03.png)
+![](./images/lab01/ex-03.png)
 
 ## Задание 4
 ### minute=int(input('Минуты:'))
