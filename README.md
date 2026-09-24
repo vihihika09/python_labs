@@ -19,6 +19,7 @@
 
 ## Задание 4
 ### minute=int(input('Минуты:'))
+### print(f'{minute//60}:{(minute%60):02d}')
 ![](./images/lab01/ex-4.png)
 
 ## Задание 5
