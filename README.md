@@ -12,9 +12,8 @@
 ![](./images/lab01/ex-02.png)
 
 ## Задание 3
-### print(f'База после скидки: {base:.2f} ₽')
-### print(f'НДС:         {vat_amount:.2f} ₽')
-### print(f'Итого к оплате:    {total:.2f} ₽')
+### print(f'База после скидки: {base:>10.2f} ₽')
+
 ![](./images/lab01/ex-03.png)
 
 ## Задание 4
