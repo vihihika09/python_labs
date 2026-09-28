@@ -3,7 +3,7 @@
 ### name=input('Имя:')
 ### age=int(input("Возраст:"))
 ### print(f'Привет,{name}! Через год тебе будет {age+1}.')
-![](./images/lab01/ex01.png)
+![](C:\Users\PC\OneDrive\Desktop\python_labs\images\lab01\ex01.png)
 
 ## Задание 2
 ### a=float(input('a:').replace(',','.'))
