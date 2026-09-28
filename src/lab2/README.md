@@ -1,4 +1,6 @@
 # ЛР2 — Коллекции и матрицы (list/tuple/set/dict)
+## Задание 1 — arrays.py
+## Min_Max
 ```python
 def min_max(nums: list[float | int]) -> tuple[float | int, float | int]:
     if len(nums)==0: raise ValueError('Пустой список')
