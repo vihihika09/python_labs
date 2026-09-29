@@ -1,6 +1,9 @@
 #Задание 1
 #1.1
 # def min_max(nums: list[float | int]) -> tuple[float | int, float | int]:
+#     """Поиск минимума и максимума
+#     [3, -1, 5, 5, 0] → (-1, 5)
+#     """
 #     if len(nums)==0: raise ValueError('Пустой список')
 #     mi=nums[0]
 #     ma=nums[0]
@@ -17,8 +20,11 @@
 # print(min_max([1.5, 2, 2.0, -3.1]))
 # print(min_max([]))
 
-# #1.2
+# # #1.2
 # def unique_sorted(nums: list[float | int]) -> list[float | int]:
+#     """Возвращает отсортированный список уникальных значений (по возрастанию)
+#     [3, 1, 2, 1, 3] → [1, 2, 3]
+#     """
 #     a=set(nums)
 #     nums=[]
 #     nums.extend(a)
@@ -35,6 +41,9 @@
 
 
 def flatten(mat: list[list | tuple]) -> list:
+    """Расплющивает список списков/кортежей в один список по строкам (row-major)
+    [[1], [], [2, 3]] → [1, 2, 3]
+    """
     result=[]
     for i in mat:
         if type(i)==list or type(i)==tuple:
