@@ -125,7 +125,7 @@ print(row_sums([[-1, 1], [10, -10]]))
 print(row_sums([[0, 0], [0, 0]]))
 print(row_sums([[1, 2], [3],]))
 ```
-![](../../images/lab02/ex2.2 out.png)
+![](../../images/lab02/ex2.2_out.png)
 
 ## Col_sums
 ```python
