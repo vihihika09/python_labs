@@ -22,7 +22,7 @@ print(min_max([-5, -2, -9]))
 print(min_max([1.5, 2, 2.0, -3.1]))
 print(min_max([]))
 ```
-![](../../images/lab02/ex1_Вывод.png)
+![](../../images/lab02/ex1.1_out.png)
 
 ## Unique_sorted
 ```python 
@@ -30,9 +30,9 @@ def unique_sorted(nums: list[float | int]) -> list[float | int]:
     """Возвращает отсортированный список уникальных значений (по возрастанию)
     [3, 1, 2, 1, 3] → [1, 2, 3]
     """
-    a=set(nums)
+    unikal=set(nums)
     nums=[]
-    nums.extend(a)
+    nums.extend(unikal)
     n=len(nums)
     for i in range(n-1):
         for j in range(0,n-i-1):
@@ -153,3 +153,40 @@ print(col_sums([[0, 0], [0, 0]]))
 print(col_sums([[1, 2], [3]]))
 ```
 ![](../../images/lab02/ex2.3_out.png)
+
+
+## Задание 3
+## Format_record
+```python
+def format_record(rec: tuple[str, str, float]) -> str:
+    """Тип записи студента как кортеж
+    ("Иванов Иван Иванович", "BIVT-25", 4.6) → "Иванов И.И., гр. BIVT-25, GPA 4.60"
+    """
+    
+    if type(rec[0])!=str or type(rec[1])!=str or type(rec[2])!=float:
+        raise TypeError('Неверный тип данных')
+    if rec[0]=='' or rec[1]=='':
+        raise ValueError('Некорректная запись')
+    
+    fio,group,gpa=rec
+    
+    try:
+        f,i,o=fio.split()
+        ans1=f'{f[0].upper()+f[1:]} {i[0].upper()}.{o[0].upper()}.'
+    except: 
+        f,i=fio.split()
+        ans1=f'{f[0].upper()+f[1:]} {i[0].upper()}.'
+    ans2=group.strip()
+    if 0.0<=gpa<=5.0:
+        ans3=float(str(gpa).strip())
+    
+    return f'{ans1}, гр. {ans2}, GPA {ans3:.2f}'
+```
+### Тест-кейсы:
+```python 
+print(format_record(("Иванов Иван Иванович", "BIVT-25", 4.6)))
+print(format_record(("Петров Пётр", "IKBO-12", 5.0)))
+print(format_record(("Петров Пётр Петрович", "IKBO-12", 5.0)))
+print(format_record(("  сидорова  анна   сергеевна ", "ABB-01", 3.999)))
+```
+![](images\lab02\ex3_out.png)

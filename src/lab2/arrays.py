@@ -27,9 +27,9 @@ def unique_sorted(nums: list[float | int]) -> list[float | int]:
     """Возвращает отсортированный список уникальных значений (по возрастанию)
     [3, 1, 2, 1, 3] → [1, 2, 3]
     """
-    a=set(nums)
+    unikal=set(nums)
     nums=[]
-    nums.extend(a)
+    nums.extend(unikal)
     n=len(nums)
     for i in range(n-1):
         for j in range(0,n-i-1):
