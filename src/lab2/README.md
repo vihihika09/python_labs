@@ -3,6 +3,9 @@
 ## Min_Max
 ```python
 def min_max(nums: list[float | int]) -> tuple[float | int, float | int]:
+    """Поиск минимума и максимума
+    [3, -1, 5, 5, 0] → (-1, 5)
+    """
     if len(nums)==0: raise ValueError('Пустой список')
     mi=nums[0]
     ma=nums[0]
@@ -14,7 +17,9 @@ def min_max(nums: list[float | int]) -> tuple[float | int, float | int]:
     ans=(mi,ma)
     return ans
 ```
+
 ### Тест-кейсы
+
 ```python
 print(min_max([3, -1, 5, 5, 0]))
 print(min_max([42]))
