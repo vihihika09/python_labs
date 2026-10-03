@@ -23,3 +23,5 @@ print(normalize("Hello\r\nWorld"))
 print(normalize("  двойные   пробелы  "))
 ```
 ![](../../images/lab03/normalize_out.png)
+
+Добавить докстринг в 1 функцию
