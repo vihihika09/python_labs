@@ -3,7 +3,8 @@
 ## Normalize
 ``` python
 def normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str:
-
+    """Возвращает объект типа str, представляющий нормализованный текстовый эквивалент 
+    исходной строки"""
     if casefold==True:
         text=(text.casefold())
     else: text=text.lower()
@@ -24,4 +25,23 @@ print(normalize("  двойные   пробелы  "))
 ```
 ![](../../images/lab03/normalize_out.png)
 
-Добавить докстринг в 1 функцию
+## Tokenize
+```python
+import re
+def tokenize(text: str) -> list[str]:
+    '''Функция возвращает объект типа list[str],
+    элементами которого являются текстовые токены, выделенные из исходной строки.
+    '''
+    result=normalize(text)
+    result=re.findall(r"\w+(?:-\w+)*",result)
+    return result
+```
+### Тест-кейсы:
+```python
+print(tokenize("привет мир"))
+print(tokenize("heLLo,world!!!"))
+print(tokenize("по-настоящему круто"))
+print(tokenize("2025 год"))
+print(tokenize("emoji 😀 не слово"))
+```
+![](../../images/lab03/Tokenize_out.png)
