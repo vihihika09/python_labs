@@ -85,3 +85,29 @@ print(top_n({"a":3,"b":2,"c":1},2))
 print(top_n({"bb":2,"aa":2,"cc":1},2))
 ```
 ![](../../images/lab03/top_n_out.png)
+
+
+
+# Задание B — src/text_stats.py (скрипт со stdin)
+НАПИСАТЬ ПОЯСНЕНИЕ К КАЖДОЙ ФУНКЦИИ И ДОКСТРИНГ В ТЕКСТ СТАТС
+```python
+from src.lib.text import normalize, tokenize, count_freq, top_n
+
+text=input()
+
+norm_text=normalize(text)
+token_text=tokenize(norm_text)
+cnt_unik_words=count_freq(token_text)
+top=top_n(cnt_unik_words)
+
+print(f'Всего слов: {len(token_text)}')
+print(f'Уникальных слов: {len(cnt_unik_words)}')
+print('Топ-5:')
+for kzh in top:
+    print(f'{kzh[0]}: {kzh[1]}')
+```
+### Тест-кейс
+```python
+print('Привет, мир! Привет!!!')
+```
+![](../../images/lab03/text_stats_out.png)

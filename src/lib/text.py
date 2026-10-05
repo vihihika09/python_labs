@@ -14,14 +14,18 @@ def normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str:
     text=' '.join(text.split())    # строки записываются в список через запятую и соединяются джоином в строку черзе пробел 
     
     return text
-    
 
 # print(normalize("ПрИвЕт\nМИр\t"))
 # print(normalize("ёжик, Ёлка"))
 # print(normalize("Hello\r\nWorld"))
 # print(normalize("  двойные   пробелы  "))
 
+
+
 ##################################################################################################################################################3
+
+
+
 import re
 
 def tokenize(text: str) -> list[str]:
@@ -41,7 +45,12 @@ def tokenize(text: str) -> list[str]:
 # print(tokenize("2025 год"))
 # print(tokenize("emoji 😀 не слово"))
 
-#################################################################################3
+
+
+#################################################################################3######################################
+
+
+
 def count_freq(tokens: list[str]) -> dict[str, int]:
     """Подсчёт частоты встречаемости элементов.
     Возвращает объект типа dict[str, int]
@@ -54,10 +63,15 @@ def count_freq(tokens: list[str]) -> dict[str, int]:
         
     return slovar
 
-print(count_freq(["a","b","a","c","b","a"]))
-print(count_freq(["bb","aa","bb","aa","cc"]))
+# print(count_freq(["a","b","a","c","b","a"]))
+# print(count_freq(["bb","aa","bb","aa","cc"]))
+
+
+
 
 ##########################################################################################33333
+
+
 
 def top_n(freq: dict[str, int], n: int = 3) -> list[tuple[str, int]]:
     
