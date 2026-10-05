@@ -1,6 +1,6 @@
 # ЛР3 — Тексты и частоты слов (словарь/множество)
 ## Задание A — src/lib/text.py
-## Normalize
+## `Normalize`
 ``` python
 def normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str:
     """Возвращает объект типа str, представляющий нормализованный текстовый эквивалент 
@@ -25,7 +25,7 @@ print(normalize("  двойные   пробелы  "))
 ```
 ![](../../images/lab03/normalize_out.png)
 ###   
-## Tokenize
+## `Tokenize`
 ```python
 import re
 def tokenize(text: str) -> list[str]:
@@ -46,7 +46,7 @@ print(tokenize("emoji 😀 не слово"))
 ```
 ![](../../images/lab03/Tokenize_out.png)
 
-## Count_freq
+## `Count_freq`
 ```python
 def count_freq(tokens: list[str]) -> dict[str, int]:
     """Подсчёт частоты встречаемости элементов.
@@ -68,7 +68,7 @@ print(count_freq(["bb","aa","bb","aa","cc"]))
 ![](../../images/lab03/Count_freq.png)
 
 
-## Top_N
+## `Top_N`
 ```python
 def top_n(freq: dict[str, int], n: int = 3) -> list[tuple[str, int]]:
     
@@ -88,8 +88,8 @@ print(top_n({"bb":2,"aa":2,"cc":1},2))
 
 
 
-# Задание B — src/text_stats.py (скрипт со stdin)
-НАПИСАТЬ ПОЯСНЕНИЕ К КАЖДОЙ ФУНКЦИИ И ДОКСТРИНГ В ТЕКСТ СТАТС
+# `Задание B — src/text_stats.py` (скрипт со stdin)
+
 ```python
 from src.lib.text import normalize, tokenize, count_freq, top_n
 
@@ -111,3 +111,5 @@ for kzh in top:
 print('Привет, мир! Привет!!!')
 ```
 ![](../../images/lab03/text_stats_out.png)
+
+НАПИСАТЬ ПОЯСНЕНИЕ К КАЖДОЙ ФУНКЦИИ И ДОКСТРИНГ В ТЕКСТ СТАТС!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!111
