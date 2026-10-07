@@ -4,14 +4,14 @@ def normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str:
     normalize("ПрИвЕт\nМИр\t") == "привет мир"
     """
     
-    if casefold==True:      #делаю нижний регистр
+    if casefold==True:      
         text=(text.casefold())
     else: text=text.lower()
     
-    if yo2e==True:                  # если надо меняю ё на е
+    if yo2e==True:                 
         text=text.replace('ё', 'е').replace('Ё', 'Е')
     
-    text=' '.join(text.split())    # строки записываются в список через запятую и соединяются джоином в строку черзе пробел 
+    text=' '.join(text.split())
     
     return text
 
