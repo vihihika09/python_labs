@@ -1,4 +1,11 @@
 from src.lib.text import normalize, tokenize, count_freq, top_n
+''' Скрипт читает одну строку текста из stdin, применяет функции 
+    normalize, tokenize, count_freq, top_n к вводимому тексту.
+    Выводит:
+    Всего слов: n
+    Уникальных слов: k
+    Топ-5: — по убыванию частоты; при равенстве — строго по алфавиту слова.
+'''
 
 text=input()
 
