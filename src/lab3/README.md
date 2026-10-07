@@ -90,10 +90,12 @@ print(top_n({"bb":2,"aa":2,"cc":1},2))
 
 # `Задание B — src/text_stats.py` (скрипт со stdin)
 Скрипт читает одну строку текста из stdin, вызывает функции из lib/text.py и выводит:
-```Всего слов: <N>
+   Всего слов: <N>
    Уникальных слов: <K>
    Топ-5: — по убыванию частоты; при равенстве — строго по алфавиту слова.
-``` 
+
+
+
 ```python
 from src.lib.text import normalize, tokenize, count_freq, top_n
 
