@@ -20,6 +20,8 @@ def format_record(rec: tuple[str, str, float]) -> str:
     ans2=group.strip()
     if 0.0<=gpa<=5.0:
         ans3=float(str(gpa).strip())
+    else:
+        raise ValueError('Некорректная запись')
     
     return f'{ans1}, гр. {ans2}, GPA {ans3:.2f}'
 
