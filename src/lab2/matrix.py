@@ -17,11 +17,11 @@ def transpose(mat: list[list[float | int]]) -> list[list]:
         ans.append(a)
     return ans
     
-print(transpose([[1, 2, 3]]))
-print(transpose([[1], [2], [3]]))
-print(transpose([[1, 2], [3, 4]]))
-print(transpose([]))
-print(transpose([[1, 2], [3]]))
+# print(transpose([[1, 2, 3]]))
+# print(transpose([[1], [2], [3]]))
+# print(transpose([[1, 2], [3, 4]]))
+# print(transpose([]))
+# print(transpose([[1, 2], [3]]))
 
 #########################################################################################################    
 
@@ -38,10 +38,10 @@ def row_sums(mat: list[list[float | int]]) -> list[float]:
         ans.append(sum(row))
     return ans
 
-print(row_sums([[1, 2, 3], [4, 5, 6]]))
-print(row_sums([[-1, 1], [10, -10]]))
-print(row_sums([[0, 0], [0, 0]]))
-print(row_sums([[1, 2], [3],]))
+# print(row_sums([[1, 2, 3], [4, 5, 6]]))
+# print(row_sums([[-1, 1], [10, -10]]))
+# print(row_sums([[0, 0], [0, 0]]))
+# print(row_sums([[1, 2], [3],]))
 
 ######################################################################################################################
 
@@ -56,13 +56,13 @@ def col_sums(mat: list[list[float | int]]) -> list[float]:
     ans=[]
     st=len(mat[0])
     for j in range(st):
-        cnt=0
+        sum_st=0
         for row in mat:
-            cnt+=row[j]
-        ans.append(cnt)
+            sum_st+=row[j]
+        ans.append(sum_st)
     return ans
 
-print(col_sums([[1,2,3],[4,5,6]]))
-print(col_sums([[-1, 1], [10, -10]]))
-print(col_sums([[0, 0], [0, 0]]))
-print(col_sums([[1, 2], [3]]))
+# print(col_sums([[1,2,3],[4,5,6]]))
+# print(col_sums([[-1, 1], [10, -10]]))
+# print(col_sums([[0, 0], [0, 0]]))
+# print(col_sums([[1, 2], [3]]))

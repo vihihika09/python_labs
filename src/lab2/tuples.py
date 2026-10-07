@@ -1,6 +1,6 @@
 # Задание 3
 def format_record(rec: tuple[str, str, float]) -> str:
-    """Тип записи студента как кортеж
+    """Тип записи студента как кортеж -> cтрока
     ("Иванов Иван Иванович", "BIVT-25", 4.6) → "Иванов И.И., гр. BIVT-25, GPA 4.60"
     """
     
@@ -17,7 +17,9 @@ def format_record(rec: tuple[str, str, float]) -> str:
     except: 
         f,i=fio.split()
         ans1=f'{f[0].upper()+f[1:]} {i[0].upper()}.'
+        
     ans2=group.strip()
+    
     if 0.0<=gpa<=5.0:
         ans3=float(str(gpa).strip())
     else:
@@ -26,6 +28,6 @@ def format_record(rec: tuple[str, str, float]) -> str:
     return f'{ans1}, гр. {ans2}, GPA {ans3:.2f}'
 
 print(format_record(("Иванов Иван Иванович", "BIVT-25", 4.6)))
-print(format_record(("Петров Пётр", "IKBO-12", 5.0)))
-print(format_record(("Петров Пётр Петрович", "IKBO-12", 5.0)))
-print(format_record(("  сидорова  анна   сергеевна ", "ABB-01", 3.999)))
+# print(format_record(("Петров Пётр", "IKBO-12", 5.0)))
+# print(format_record(("Петров Пётр Петрович", "IKBO-12", 5.0)))
+# print(format_record(("  сидорова  анна   сергеевна ", "ABB-01", 3.999)))
