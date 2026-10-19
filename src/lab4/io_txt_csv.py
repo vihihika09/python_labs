@@ -33,19 +33,21 @@ def write_csv(rows: list[tuple | list], path: str | Path, header: tuple[str, ...
         best=len(rows[0])
         for i in rows:
             if len(i)!=best:
-                raise ValueError ('строки разной длины')
-        
+                raise ValueError ('строки разной длины')    
     file=Path(path)  
     
     with open(file,'w',encoding='utf-8',newline='') as f:
         writer=csv.writer(f,delimiter=',')
         
-        if header is not None and len(header)==best:
+        if header is not None and rows:
+            if len(header)==best:
+                writer.writerow(header)
+            else:
+                raise ValueError ('строки разной длины')
+                
+            writer.writerows(rows)
+        elif not rows:
             writer.writerow(header)
-        else:
-            raise ValueError ('строки разной длины')
-            
-        writer.writerows(rows)
         
 write_csv([("word","count"),("test",3)],"data/lab4/report.csv",('Первый',"заголовок"))
 # # write_csv([],"data/lab4/report.csv")
