@@ -37,6 +37,9 @@ Cчитается частота слов, а отчёт сохраняется 
     Уникальных слов: <...>  
     Топ-5:   
 
+![](../../images/lab04/input_report.png)
+![](../../images/lab04/report_output.png)
+
 Если data/input.txt не существует - `FileNotFoundError`  
 Если пустой вход в report.csv - файл будет содержать только заголовок.  
 ![](../../images/lab04/на_вход_csv-пустой_файл.png)
