@@ -20,6 +20,6 @@
 Команда запуска:
 ```python 
  write_csv([("word","count"),("test",3)],"data/lab4/report.csv",('Первый',"заголовок"))
-  ```
+  ```  
 В файле report.csv:
 ![](../../images/lab04/A2_output.png)
