@@ -5,7 +5,7 @@ def sorted_word_counts(freq: dict[str, int]) -> list[tuple[str, int]]:
 
 from src.lab4.io_txt_csv import read_text, write_csv
 
-ENcoDing='cp1251'
+ENcoDing='utf-8'
 
 try:
     text=read_text('data/lab4/input.txt',encoding=ENcoDing)
