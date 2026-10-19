@@ -2,7 +2,7 @@ def sorted_word_counts(freq: dict[str, int]) -> list[tuple[str, int]]:
     """Возвращает список отсортировнаных кортежей count ↓, слово ↑ (при равенстве)."""
     return sorted(freq.items(), key=lambda kv: (-kv[1], kv[0]))
 
-# def f():
+
 from src.lab4.io_txt_csv import read_text, write_csv
 
 ENcoDing='cp1251'
