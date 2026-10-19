@@ -8,11 +8,11 @@
   
 Чтобы выбрать кодировку,ее нужно передать явно в метод read_text в виде `str().`
 
-![](../..images/lab04/A1_команда_запуска.png)
+![](../../images/lab04/A1_команда_запуска.png)
 
 
 
 
-
-
-``` write_csv([("word","count"),("test",3)],"data/lab4/report.csv",('Первый',"заголовок")) ```
+```python 
+ write_csv([("word","count"),("test",3)],"data/lab4/report.csv",('Первый',"заголовок"))
+  ```
