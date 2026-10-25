@@ -49,5 +49,5 @@ def write_csv(rows: list[tuple | list], path: str | Path, header: tuple[str, ...
         elif not rows:
             writer.writerow(header)
         
-write_csv([("word","count"),("test",3)],"data/lab4/report.csv",('111111',"заголовок"))
+write_csv([("word","count"),("test",3)],"data/lab4/report.csv",('Первый1111',"заголовок"))
 # # write_csv([],"data/lab4/report.csv")

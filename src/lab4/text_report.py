@@ -21,7 +21,7 @@ cnt_unik_words=count_freq(tokens) # return словарь
 
 top_5=top_n(cnt_unik_words,5) # return список
 rows=sorted_word_counts(cnt_unik_words) # return список
-write_csv(rows,'data/lab4/report.csv',('WoRd','Count'))
+write_csv(rows,'data/lab4/report.csv',('Word111','Count'))
 
 print(f'Всего слов: {len(tokens)}')
 print(f'Уникальных слов: {len(cnt_unik_words)}')
