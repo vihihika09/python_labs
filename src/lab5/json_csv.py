@@ -18,10 +18,10 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
             raise FileNotFoundError("файл не найден")
         
     if json_f.suffix.lower() != ".json":
-        raise ValueError(f"Неверный формат входного файла")
+        raise ValueError('Входной файл должен быть JSON')
     
     if csv_f.suffix.lower() != ".csv":
-        raise ValueError(f"Неверный формат выходного файла")
+        raise ValueError("Входной файл должен быть CSV")
     
     with json_f.open ("r",encoding='UTF-8') as f:
         try:
@@ -48,4 +48,42 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
 
 if __name__ == '__main__':
     json_to_csv('data/lab5/samples/people.json','data/lab5/out/people_from_json.csv')
-    json_to_csv('data/lab5/samples/cities.json','data/lab5/out/cities.csv')
+    json_to_csv('data/lab5/samples/cities.json','data/lab5/out/cities_json_to_.csv')
+    
+    
+def csv_to_json(csv_path: str, json_path: str) -> None:
+    """
+    Преобразует CSV в JSON (список словарей).
+    Заголовок обязателен, значения сохраняются как строки.
+    json.dump(..., ensure_ascii=False, indent=2)
+    """
+    csv_fi=Path(csv_path)
+    json_fi=Path(json_path)
+    
+    if not csv_fi.exists():
+        raise FileNotFoundError("CSV Файл не найден")
+    
+    if not json_fi.exists():
+            raise FileNotFoundError("JSON Файл не найден")
+        
+    if csv_fi.suffix.lower() != ".csv":
+            raise ValueError("Входной файл должен быть CSV")
+        
+    if json_fi.suffix.lower() != ".json":
+        raise ValueError("Входной файл должен быть JSON")
+    
+    with csv_fi.open('r',encoding='UTF-8',newline='') as f:
+        row = csv.DictReader(f)
+        if row.fieldnames is None:
+            raise ValueError("CSV не содержит заголовок")
+        rows=list(row)
+        
+        if len(rows) == 0:
+            raise ValueError("В CSV не содержится данных")
+        
+        with json_fi.open("w", encoding="utf-8") as f:
+            json.dump(rows, f, ensure_ascii=False, indent=2)
+            
+if __name__=='__main__':
+    csv_to_json('data/lab5/samples/people.csv','data/lab5/out/people_from_csv.json')
+    
