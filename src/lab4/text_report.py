@@ -22,13 +22,16 @@ cnt_unik_words=count_freq(tokens) # return словарь
 
 top_5=top_n(cnt_unik_words,5) # return список
 rows=sorted_word_counts(cnt_unik_words) # return список
-write_csv(rows,'data/lab4/report.csv',('Word','Count'))
 
-print(f'Всего слов: {len(tokens)}')
-print(f'Уникальных слов: {len(cnt_unik_words)}')
-print('Топ-5:')
-for kzh in top_5:
-    print(f'{kzh[0]}: {kzh[1]}')    
+
+if __name__=='__main__':
+    write_csv(rows,'data/lab4/report.csv',('Word','Count'))
+
+    print(f'Всего слов: {len(tokens)}')
+    print(f'Уникальных слов: {len(cnt_unik_words)}')
+    print('Топ-5:')
+    for kzh in top_5:
+        print(f'{kzh[0]}: {kzh[1]}')    
 
 
 

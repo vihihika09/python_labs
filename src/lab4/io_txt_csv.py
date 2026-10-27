@@ -48,6 +48,8 @@ def write_csv(rows: list[tuple | list], path: str | Path, header: tuple[str, ...
             writer.writerows(rows)
         elif not rows:
             writer.writerow(header)
-        
-write_csv([("word","count"),("test",3)],"data/lab4/report.csv",('Первый',"заголовок"))
-# # write_csv([],"data/lab4/report.csv")
+            
+            
+if __name__=='__main__':        
+    write_csv([("word","count"),("test",3)],"data/lab4/report.csv",('Первый',"заголовок"))
+    # write_csv([],"data/lab4/report.csv",())
