@@ -17,11 +17,12 @@ except UnicodeDecodeError:
 from src.lib.text import normalize, tokenize, count_freq, top_n
 
 tokens=tokenize(normalize(text))
+
 cnt_unik_words=count_freq(tokens) # return словарь
 
 top_5=top_n(cnt_unik_words,5) # return список
 rows=sorted_word_counts(cnt_unik_words) # return список
-write_csv(rows,'data/lab4/report.csv',('Word111','Count'))
+write_csv(rows,'data/lab4/report.csv',('Word','Count'))
 
 print(f'Всего слов: {len(tokens)}')
 print(f'Уникальных слов: {len(cnt_unik_words)}')
