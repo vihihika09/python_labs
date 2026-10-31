@@ -6,22 +6,21 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
     """
     Преобразует JSON-файл в CSV.
     Поддерживает список словарей [{...}, {...}], заполняет отсутствующие поля пустыми строками.
-    Кодировка UTF-8. Порядок колонок — как в первом объекте или алфавитный (указать в README).
+    Кодировка UTF-8. Порядок колонок — как в первом объекте.
     """
     json_f=Path(json_path)
     csv_f=Path(csv_path)
     
+    
     if not json_f.exists():
         raise FileNotFoundError("файл не найден")
-    
     if not csv_f.exists():
             raise FileNotFoundError("файл не найден")
-        
     if json_f.suffix.lower() != ".json":
         raise ValueError('Входной файл должен быть JSON')
-    
     if csv_f.suffix.lower() != ".csv":
         raise ValueError("Входной файл должен быть CSV")
+    
     
     with json_f.open ("r",encoding='UTF-8') as f:
         try:
@@ -31,7 +30,6 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
         
     if not isinstance(data, list) or len(data) == 0:
         raise ValueError('Файл JSON пустой / имеет неправильный формат')
-    
     if not all(isinstance(i, dict) for i in data):
         raise ValueError("Все элементы списка JSON должны быть словарями")
     
@@ -47,9 +45,11 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
 
 
 if __name__ == '__main__':
-    json_to_csv('data/lab5/samples/people.json','data/lab5/out/people_from_json.csv')
-    json_to_csv('data/lab5/samples/cities.json','data/lab5/out/cities_json_to_.csv')
+    json_to_csv('data/lab5/samples/people1.json','data/lab5/out/people_from_json1.csv')
+    json_to_csv('data/lab5/samples/cities2.json','data/lab5/out/cities_json_to2_.csv')
+    json_to_csv('data/lab5/samples/my_example_bakery.json','data/lab5/out/bakery_json_to_.csv')
     
+############################################################################################3
     
 def csv_to_json(csv_path: str, json_path: str) -> None:
     """
@@ -62,21 +62,20 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     
     if not csv_fi.exists():
         raise FileNotFoundError("CSV Файл не найден")
-    
     if not json_fi.exists():
             raise FileNotFoundError("JSON Файл не найден")
-        
     if csv_fi.suffix.lower() != ".csv":
             raise ValueError("Входной файл должен быть CSV")
-        
     if json_fi.suffix.lower() != ".json":
         raise ValueError("Входной файл должен быть JSON")
     
+    
     with csv_fi.open('r',encoding='UTF-8',newline='') as f:
-        row = csv.DictReader(f)
-        if row.fieldnames is None:
+        reader = csv.DictReader(f)
+        if reader.fieldnames is None:
             raise ValueError("CSV не содержит заголовок")
-        rows=list(row)
+        rows=list(reader)
+        
         
         if len(rows) == 0:
             raise ValueError("В CSV не содержится данных")
@@ -85,5 +84,7 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
             json.dump(rows, f, ensure_ascii=False, indent=2)
             
 if __name__=='__main__':
-    csv_to_json('data/lab5/samples/people.csv','data/lab5/out/people_from_csv.json')
+    csv_to_json('data/lab5/samples/cities3.csv','data/lab5/out/cities3.json')
+    # csv_to_json('data/lab5/samples/my_example_bakery.csv','data/lab5/out/bakery_csv_to_.json')
+    
     
