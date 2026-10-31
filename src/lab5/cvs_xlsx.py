@@ -36,7 +36,7 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
                 if val_len > max_len:
                     max_len = val_len
         col_letter = col[0].column_letter
-        ws.column_dimensions[col_letter].width = max(max_len + 2, 7)
+        ws.column_dimensions[col_letter].width = max(max_len, 7)
             
     wb.save(xlsx_file)
     
