@@ -61,6 +61,7 @@ python -m src.lab5.json_csv
   
 Было:  
 ![](../../images/lab05/фун1_было.png)  
+  
 Результат работы функции появляется в файле 'people_from_json1.csv':  
 ![](../../images/lab05/фун1_стало.png)  
 
@@ -117,7 +118,8 @@ python -m src.lab5.json_csv
 
 Было:  
 ![](../../images/lab05/фун2_было.png)  
-Результат работы функции csv_to_json находится в файле 'cities3.json'
+  
+Результат работы функции csv_to_json находится в файле 'cities3.json'  
 ![](../../images/lab05/фун2_стало.png)  
 
 
