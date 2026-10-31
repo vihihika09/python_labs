@@ -121,7 +121,8 @@ python -m src.lab5.json_csv
   
 Результат работы функции csv_to_json находится в файле 'cities3.json'  
 ![](../../images/lab05/фун2_стало.png)  
-  
+
+## Задание B — CSV → XLSX  
 ## Функция csv_to_xlsx
 ``` python
 def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
