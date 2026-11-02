@@ -1,5 +1,5 @@
 # ЛР6 — CLI‑утилиты с argparse (cat/grep‑lite + конвертеры): Техническое задание
-## Модуль src/lab6/cli_text.py
+## Модуль `src/lab6/cli_text.py`
 
 ```python
 import argparse
@@ -19,7 +19,7 @@ def main():
 
     args = parser.parse_args()
 ```
-## Подкоманда cat
+## Подкоманда `cat`
 
 ``` python
 if args.command == "cat":
@@ -35,11 +35,11 @@ if args.command == "cat":
             for row in rows:
                 print(row)
 ```
-Команда запуска без нумерации строк:  
+Команда запуска **без нумерации строк**:  
 ``` python 
 python -m src.lab6.cli_text cat --input data/lab6/text.txt
 ``` 
-Команда запуска с нумерацией строк:  
+Команда запуска **с нумерацией строк**:  
 ``` python 
 python -m src.lab6.cli_text cat --input data/lab6/text.txt -n
 ``` 
@@ -47,7 +47,7 @@ python -m src.lab6.cli_text cat --input data/lab6/text.txt -n
 Вывод в терминале:  
 ![](../../images/lab6/вывод_сN_безN.png)  
 
-## Подкоманда stats
+## Подкоманда `stats`
 ```python
 elif args.command == "stats":
         try:
@@ -68,21 +68,21 @@ elif args.command == "stats":
             print(f'{kzh[0]}: {kzh[1]}')
 ```
 
-Команда запуска (с параметром top=10):  
+Команда запуска **(с параметром top=10)**:  
 ``` python 
 python -m src.lab6.cli_text stats --input data/lab6/text.txt --10 
 ``` 
-Команда запуска (Топ-5 по умолчанию):  
+Команда запуска **(Топ-5 по умолчанию)**:  
 ``` python 
 python -m src.lab6.cli_text stats --input data/lab6/text.txt
 ```
 Вывод в терминале:  
 ![](../../images/lab6/частота_слов_10_5.png)  
 
-### HELP
+### _HELP_
 ![](../../images/lab6/HELP111.png)  
 
-## Модуль src/lab6/cli_convert.py
+## Модуль `src/lab6/cli_convert.py`
 ```python
 import argparse
 from src.lab5.json_csv import json_to_csv, csv_to_json
@@ -108,7 +108,7 @@ def main():
 
     args = parser.parse_args()
 ```
-## Подкоманды json2csv, csv2json, csv2json
+## Подкоманды `json2csv, csv2json, csv2json`
 ``` python 
 try:
         if args.cmd=='json2csv':
@@ -123,34 +123,34 @@ try:
     except ValueError as e:
         parser.error(str(e))
 ```
-## Команда запуска json2csv:  
+## Команда запуска `json2csv:`  
 ```python
  python -m src.lab6.cli_convert json2csv --in data/lab5/samples/people1.json --out data/lab6/output/json2csv.csv
  ```
 
- Результат в файле data/lab6/output/json2csv.csv:  
+ Результат в файле `data/lab6/output/json2csv.csv:`   
  ![](../../images/lab6/out1.png)
 
 
 
- ## Команда запуска csv2json:  
+ ## Команда запуска `csv2json:`  
 ```python
  python -m src.lab6.cli_convert csv2json --in data/lab5/samples/cities3.csv --out data/lab6/output/csv2json.json
  ```
 
- Результат в файле data/lab6/output/csv2json.json:  
+ Результат в файле `data/lab6/output/csv2json.json:`  
  ![](../../images/lab6/ou2.png)
 
 
 
 
- ## Команда запуска csv2xlsx:  
+ ## Команда запуска `csv2xlsx:`  
 ```python
 python -m src.lab6.cli_convert csv2xlsx --in data/lab5/samples/my_example_bakery.csv --out data/lab6/output/csv2xlsx.xlsx
  ```
 
- Результат в файле data/lab6/output/csv2xlsx.xlsx:  
+ Результат в файле `data/lab6/output/csv2xlsx.xlsx:`  
  ![](../../images/lab6/out3.png)
 
-### HELP
+### _HELP_
 ![](../../images/lab6/ELP2222222.png)
