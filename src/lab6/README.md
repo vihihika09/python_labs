@@ -123,7 +123,7 @@ try:
     except ValueError as e:
         parser.error(str(e))
 ```
-Комаеда запуска json2csv:  
+## Команда запуска json2csv:  
 ```python
  python -m src.lab6.cli_convert json2csv --in data/lab5/samples/people1.json --out data/lab6/output/json2csv.csv
  ```
@@ -133,7 +133,7 @@ try:
 
 
 
- Комаеда запуска csv2json:  
+ ## Команда запуска csv2json:  
 ```python
  python -m src.lab6.cli_convert csv2json --in data/lab5/samples/cities3.csv --out data/lab6/output/csv2json.json
  ```
@@ -144,7 +144,7 @@ try:
 
 
 
- Комаеда запуска csv2xlsx:  
+ ## Команда запуска csv2xlsx:  
 ```python
 python -m src.lab6.cli_convert csv2xlsx --in data/lab5/samples/my_example_bakery.csv --out data/lab6/output/csv2xlsx.xlsx
  ```
