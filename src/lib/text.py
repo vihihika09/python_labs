@@ -83,3 +83,22 @@ def top_n(freq: dict[str, int], n: int = 3) -> list[tuple[str, int]]:
 
 # print(top_n({"a":3,"b":2,"c":1},2))
 # print(top_n({"bb":2,"aa":2,"cc":1},2))
+
+from pathlib import Path
+"""Открыть файл на чтение; вернуть содержимое как одну строку.
+Чтобы выбрать кодировку, её нужно передать явно в метод read_text в виде строки"""
+
+def read_text(path: str | Path, encoding: str = "utf-8") -> str:
+    p=Path(path)
+    return p.read_text(encoding=encoding)
+
+
+if __name__ == "__main__":
+    if len(read_text('data/lab4/input.txt'))==0:
+        print()
+    try:
+        print(read_text('data/lab4/input.txt'))
+    except FileNotFoundError:
+        print('файл не найден')
+    except UnicodeDecodeError:
+        print('неверная кодировка')

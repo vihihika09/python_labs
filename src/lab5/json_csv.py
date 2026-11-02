@@ -14,8 +14,6 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
     
     if not json_f.exists():
         raise FileNotFoundError("файл не найден")
-    if not csv_f.exists():
-            raise FileNotFoundError("файл не найден")
     if json_f.suffix.lower() != ".json":
         raise ValueError('Входной файл должен быть JSON')
     if csv_f.suffix.lower() != ".csv":
@@ -62,8 +60,6 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     
     if not csv_fi.exists():
         raise FileNotFoundError("CSV Файл не найден")
-    if not json_fi.exists():
-            raise FileNotFoundError("JSON Файл не найден")
     if csv_fi.suffix.lower() != ".csv":
             raise ValueError("Входной файл должен быть CSV")
     if json_fi.suffix.lower() != ".json":
