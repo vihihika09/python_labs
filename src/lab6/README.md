@@ -35,15 +35,17 @@ if args.command == "cat":
             for row in rows:
                 print(row)
 ```
+---
 Команда запуска **без нумерации строк**:  
 ``` python 
 python -m src.lab6.cli_text cat --input data/lab6/text.txt
 ``` 
+---
 Команда запуска **с нумерацией строк**:  
 ``` python 
 python -m src.lab6.cli_text cat --input data/lab6/text.txt -n
 ``` 
-
+---
 Вывод в терминале:  
 ![](../../images/lab6/вывод_сN_безN.png)  
 
@@ -67,15 +69,17 @@ elif args.command == "stats":
         for kzh in topN:
             print(f'{kzh[0]}: {kzh[1]}')
 ```
-
+---
 Команда запуска **(с параметром top=10)**:  
 ``` python 
 python -m src.lab6.cli_text stats --input data/lab6/text.txt --10 
 ``` 
+---
 Команда запуска **(Топ-5 по умолчанию)**:  
 ``` python 
 python -m src.lab6.cli_text stats --input data/lab6/text.txt
 ```
+---
 Вывод в терминале:  
 ![](../../images/lab6/частота_слов_10_5.png)  
 
@@ -129,6 +133,7 @@ try:
  ```
 
  Результат в файле `data/lab6/output/json2csv.csv:`   
+   
  ![](../../images/lab6/out1.png)
 
 
@@ -137,8 +142,9 @@ try:
 ```python
  python -m src.lab6.cli_convert csv2json --in data/lab5/samples/cities3.csv --out data/lab6/output/csv2json.json
  ```
-
+  
  Результат в файле `data/lab6/output/csv2json.json:`  
+   
  ![](../../images/lab6/ou2.png)
 
 
@@ -149,7 +155,8 @@ try:
 python -m src.lab6.cli_convert csv2xlsx --in data/lab5/samples/my_example_bakery.csv --out data/lab6/output/csv2xlsx.xlsx
  ```
 
- Результат в файле `data/lab6/output/csv2xlsx.xlsx:`  
+ Результат в файле `data/lab6/output/csv2xlsx.xlsx:`   
+   
  ![](../../images/lab6/out3.png)
 
 ### _HELP_
