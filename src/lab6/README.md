@@ -108,7 +108,7 @@ def main():
 
     args = parser.parse_args()
 ```
-## Подкоманды json2csv,csv2json,csv2json
+## Подкоманды json2csv, csv2json, csv2json
 ``` python 
 try:
         if args.cmd=='json2csv':
